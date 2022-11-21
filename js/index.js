@@ -12,7 +12,7 @@
       2. Add an Event listener for the submit button, which will display the score and highlight 
          the correct answers when the button is clicked. Use the code from lines 67 to 86 to help you.
 
-      3. Add 2 more questions to the app (each question must have 4 options).
+      3. Add 2 more questions to the app (each question must have 4 options).---
 
       4. Reload the page when the reset button is clicked (hint: search window.location)
 
@@ -43,6 +43,16 @@ window.addEventListener('DOMContentLoaded', () => {
       q: 'What is the capital of Australia',
       o: ['Sydney', 'Canberra', 'Melbourne', 'Perth'],
       a: 1,
+    },
+    {
+      q: 'What is a single strand of spaghetti called',
+      o: ['Spaghet', 'Spaghetto', 'Spag', 'Getti'],
+      a: 2,
+    },
+    {
+      q: 'Who was the original yellow Wiggles member',
+      o: ['Jeff', 'Anthony', 'Greg', 'Murray'],
+      a: 3,
     },
   ];
 
