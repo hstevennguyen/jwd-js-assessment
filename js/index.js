@@ -76,6 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (quizItem.a == i) {
           //change background color of li element here
+        
         }
 
         if (radioElement.checked) {
