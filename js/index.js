@@ -112,6 +112,8 @@ setInterval(updateCountdown, 1000);
 
   // call the displayQuiz function
   displayQuiz();
+
+  //event listener for submit button
   btnSubmit.addEventListener("click", calculateScore);
 
 //Added timer here
