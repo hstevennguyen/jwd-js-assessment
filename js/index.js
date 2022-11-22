@@ -19,11 +19,15 @@
       5. Add a countdown timer - when the time is up, end the quiz, display the score and highlight the correct answers
 *************************** */
 
+
 window.addEventListener('DOMContentLoaded', () => {
   const start = document.querySelector('#start');
   start.addEventListener('click', function (e) {
     document.querySelector('#quizBlock').style.display = 'block';
     start.style.display = 'none';
+//Setting timer interval
+setInterval(updateCountdown, 1000);
+
   });
   // quizArray QUESTIONS & ANSWERS
   // q = QUESTION, o = OPTIONS, a = CORRECT ANSWER
@@ -109,6 +113,27 @@ window.addEventListener('DOMContentLoaded', () => {
   // call the displayQuiz function
   displayQuiz();
   btnSubmit.addEventListener("click", calculateScore);
+
+//Added timer here
+const remainingTime = 60;
+let timeL = remainingTime;
+const countdownEl = document.getElementById('time');
+const updateCountdown = () =>{
+  countdownEl.innerHTML = `${timeL} s remaining`;
+  timeL--;
+  if(timeL < 0){
+    calculateScore();
+    timeL = '0';
+  }
+}
+//End of Timer
 });
+
+
+//Reload quiz function
+const reloadPage = () =>{
+  location.reload();
+}
+btnReset.addEventListener("click", reloadPage);
 
 
