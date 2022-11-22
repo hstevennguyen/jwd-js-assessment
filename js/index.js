@@ -47,12 +47,12 @@ window.addEventListener('DOMContentLoaded', () => {
     {
       q: 'What is a single strand of spaghetti called',
       o: ['Spaghet', 'Spaghetto', 'Spag', 'Getti'],
-      a: 2,
+      a: 1,
     },
     {
       q: 'Who was the original yellow Wiggles member',
       o: ['Jeff', 'Anthony', 'Greg', 'Murray'],
-      a: 3,
+      a: 2,
     },
   ];
 
@@ -86,11 +86,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (quizItem.a == i) {
           //change background color of li element here
-        
+          liElement.style.backgroundColor = 'lightgreen';
         }
 
         if (radioElement.checked) {
           // code for task 1 goes here
+          if(quizItem.a == i){
+            score++;
+            console.log(score);
+          }
+
         }
       }
     });
@@ -98,4 +103,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // call the displayQuiz function
   displayQuiz();
+  btnSubmit.addEventListener("click", calculateScore);
 });
+
+
