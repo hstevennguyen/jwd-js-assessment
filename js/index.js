@@ -94,8 +94,13 @@ window.addEventListener('DOMContentLoaded', () => {
           if(quizItem.a == i){
             score++;
             console.log(score);
-          }
+          };
 
+          if(score > 0){
+            document.getElementById('score').innerHTML = `You got ${score} questions correct. Good job!`;
+          } else {
+            document.getElementById('score').innerHTML = `You got ${score} questions correct. Revise and try again`;
+          }
         }
       }
     });
